@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 public class Comment {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "board_id")
+    @JoinColumn(name = "BOARD_ID")
     private Board board;
 
     private String content;
